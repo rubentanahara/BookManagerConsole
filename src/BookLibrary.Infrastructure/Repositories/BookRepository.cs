@@ -16,9 +16,12 @@ public class BookRepository : IBookRepository
 
     public async Task<Book> AddAsync(Book book)
     {
-        await _context.Books.AddAsync(book);
-        await _context.SaveChangesAsync();
-        return book;
+        await Task.Delay(20);
+        return null;
+
+        // await _context.Books.AddAsync(book);
+        // await _context.SaveChangesAsync();
+        // return book;
     }
 
     public async Task DeleteAsync(int id)
@@ -27,7 +30,7 @@ public class BookRepository : IBookRepository
         if (book != null)
         {
             _context.Books.Remove(book);
-            await _context.SaveChangesAsync();
+            // Save the data
         }
     }
 

@@ -54,7 +54,6 @@ public class MenuHandler
                 await SearchBooksByAuthor();
                 break;
             case 3:
-                await AddNewBook();
                 break;
             case 4:
                 await UpdateBook();
@@ -63,7 +62,6 @@ public class MenuHandler
                 await DeleteBook();
                 break;
             case 6:
-                await ViewBookDetails();
                 break;
         }
 
@@ -101,7 +99,7 @@ public class MenuHandler
             ISBN = ConsoleHelper.ReadInput("Enter ISBN")
         };
 
-        await _bookService.AddBookAsync(bookDto);
+        // await _bookService.AddBookAsync(bookDto);
         ConsoleHelper.WriteSuccess("Book added successfully!");
     }
 

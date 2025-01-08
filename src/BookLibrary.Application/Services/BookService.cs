@@ -62,7 +62,7 @@ public class BookService : IBookService
 
     public async Task DeleteBookAsync(int id)
     {
-        await _bookRepository.DeleteAsync(id);
+        
     }
 
     private static BookDto MapToDto(Book book)
